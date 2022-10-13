@@ -1,0 +1,44 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+
+    <record model="ir.ui.view" id="restrict_admin.list">
+      <field name="name">restrict_admin list</field>
+      <field name="model">restrict_admin.rights</field>
+      <field name="arch" type="xml">
+        <sheet>
+          <field name="name"/>
+          
+        </sheet>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="restrict_admin.action_window">
+      <field name="name">Restrict Admin window</field>
+      <field name="res_model">restrict_admin.rights</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- Top menu item -->
+
+    <menuitem name="Restrict Admin" id="restrict_admin.menu_root"/>
+
+    <!-- menu categories -->
+
+    <menuitem name="Groups" id="restrict_admin.groups" parent="restrict_admin.menu_root"/>
+    <!-- <menuitem name="Menu 2" id="restrict_admin.menu_2" parent="restrict_admin.menu_root"/> -->
+
+    <!-- actions -->
+    <menuitem name="Groups" id="restrict_admin.menu_1_groups" parent="restrict_admin.groups"
+              action="restrict_admin.action_window"/>
+    <menuitem name="Users" id="restrict_admin.menu_1_users" parent="restrict_admin.groups"
+              action="restrict_admin.action_window"/>
+    <!-- <menuitem name="Server to list" id="restrict_admin" parent="restrict_admin.menu_2"
+              action="restrict_admin.action_server"/> -->
+
+  </data>
+</odoo>
