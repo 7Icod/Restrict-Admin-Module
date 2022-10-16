@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <record model="res.groups" id="hide_apps_option">
+        <field name="name">Hide Apps Option</field>
+    </record> 
+</odoo>

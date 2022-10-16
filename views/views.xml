@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<record id="hide_app_option" model="ir.ui.view">
+    <field name="model">res.config.settings</field>
+    <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+    <field name="arch" type="xml">
+            <xpath expr="//button[@name='%(base.action_res_users)d']" position="attributes">
+                <attribute name="groups">!restrict_admin.hide_apps_option</attribute>
+            </xpath>
+        </field>
+</record>
+</odoo>
