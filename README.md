@@ -1,2 +1,3 @@
 # Restrict-Admin-Module
-# Add the module to the repository
+# Odoo 15
+This module hides Apps & Settings from the Admin.
